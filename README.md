@@ -1,5 +1,5 @@
 # javascript-challenge
-For all my javascript projects
+For all UFO javascript projects
 
 
 Level 1: Automatic Table and Date Search
