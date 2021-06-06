@@ -64,6 +64,9 @@ body {
 .filters {
   margin-top: 10px;
 }
+#filter-btn {
+  background:blue;
+}
 
 select {
   display: block;
