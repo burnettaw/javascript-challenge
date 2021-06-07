@@ -27,7 +27,8 @@ function createFilterObject(){
     else {
         delete filter[id];
     }
-createfilter();
+//createFilterObject();
+console.log(elementValue);
 }
 createtable(tableData);
 function createFilter(){
@@ -36,7 +37,5 @@ function createFilter(){
 
    })
     createtable(filterdata);
-
-
 }
-d3.selectAll(".filter").on("change", createFilterObject);
+d3.selectAll(".filter").on("change", createFilterObject());
