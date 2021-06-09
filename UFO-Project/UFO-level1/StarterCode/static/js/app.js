@@ -29,3 +29,4 @@ function createFilter(){
 
 }
 d3.selectAll("#filter-btn").on("click", createFilter);
+d3.selectAll("#datetime").on("change", createFilter);

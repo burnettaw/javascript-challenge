@@ -16,18 +16,17 @@ function createtable(data){
     });
 
 }
-var filter = {};
-function createFilterObject(){
-    var elements = d3.select(this).select("input");
+var filters = {};
+function createFilterObject() {
+    var elements = d3.select(this);//.select("input");
     //var elements = d3.select("input");
-    
     var elementValue = elements.property("value");
     var id = elements.attr("id");
     if (elementValue){
-        filter[id] = elementValue;
+        filters[id] = elementValue;
     }
     else {
-        delete filter[id];
+        delete filters[id];
     }
 
     console.log(elementValue);
@@ -38,11 +37,11 @@ function createFilterObject(){
 //createtable(tableData);
 function createFilter(){
     let filterdata = tableData;
-    Object.entries(filter).forEach(([key, value]) => {
+    Object.entries(filters).forEach(([key, value]) => {
         filterdata = filterdata.filter(row => row[key] === value);
 
    });
     createtable(filterdata);
 }
-d3.selectAll(".filter").on("change", createFilterObject());
+d3.selectAll("input").on("change", createFilterObject);
 createtable(tableData);
